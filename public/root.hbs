@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classroom Update</title>
+
+</head>
+<body>
+<h1>{{title}}</h1>
+<ul style="max-width:800px">
+  {{#each post}}
+ <a href="{{this.link}}"><li style="padding:15px">{{this.message}}<span style="display:block;font-size:12px;color:#696969">{{this.updated_time}}</span></li></a>
+
+ {{/each}}
+</ul>
+{{date}}
+</body>
+</html>
