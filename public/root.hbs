@@ -8,6 +8,7 @@
    <!-- Compiled and minified JavaScript -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <style>
 .grid-item {width: 440px;margin-right: 20px}
 @media only screen and (max-width: 601px) {
@@ -18,7 +19,11 @@
 <body style="background:#edf1f3">
  <div class="container ">
 <h2 style="text-align:center">{{title}}</h2>
-<h6 style="text-align: center;">By <a href="#">Golam Rabbani</a></h6>
+ <a href="https://github.com/mgorabbani/group-post-update" style="
+    position: absolute;
+    top: 40px;
+    right: 20px;">Source Code<i class="fa fa-github" style="padding:10px;font-size:20px" aria-hidden="true"></i></a></h6>
+
 <ul class="grid"  data-masonry='{ "itemSelector": ".grid-item" }'>
      {{#each post}}
 
