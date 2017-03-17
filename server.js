@@ -1,7 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 const FB = require('fb');
-let s = 'sdf'
+const port = process.env.PORT || 3000;
+
 FB.setAccessToken('274539779641078|_8F-vZcJXFQSsrhEZTMWGtDr9r0');
 
 var body = 'My first post using facebook-node-sdk';
@@ -26,4 +27,4 @@ FB.api(
 );
 var app = express()
 
-app.listen(3000)
+app.listen(port)
