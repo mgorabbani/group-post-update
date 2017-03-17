@@ -3,11 +3,11 @@ const hbs = require('hbs');
 const FB = require('fb');
 const port = process.env.PORT || 3000;
 
-FB.setAccessToken('274539779641078|_8F-vZcJXFQSsrhEZTMWGtDr9r0');
+FB.setAccessToken('EAACEdEose0cBALCy3bZBdLEL9DFyRP1GNvQv6f89mp7EKlZAQp7NGKuTl4QZAVZAAV0P7Pr5W6102H3JoLN9znaSwZCpU8p0bFAbFWZAlQSEZAWmS37yC9HGdXYIbbXMemPVJZBHxPpOko0Os1CFQY3iRuxL2pwIscZCjsZBKLF2hmSbZCo0U7RrQuCeg2VhrzQnMkZD');
 
 var body = 'My first post using facebook-node-sdk';
 FB.api(
-  '/586400221495560/feed',
+  '/367870976752456/feed',
   'GET',
   {"fields":"message,updated_time"},
   function(response) {
