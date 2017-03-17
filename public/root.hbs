@@ -2,16 +2,44 @@
 <html lang="en">
 <head>
   <title>Classroom Update</title>
+  <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<style>
+.grid-item {width: 440px;margin-right: 20px}
+@media only screen and (max-width: 601px) {
+  .grid-item {width: 100%;margin-right: 20px}
+}
+</style>
 </head>
-<body>
-<h1>{{title}}</h1>
-<ul style="max-width:800px">
-  {{#each post}}
- <a href="{{this.link}}"><li style="padding:15px">{{this.message}}<span style="display:block;font-size:12px;color:#696969">{{this.updated_time}}</span></li></a>
+<body style="background:#edf1f3">
+ <div class="container ">
+<h2 style="text-align:center">{{title}}</h2>
+<h6 style="text-align: center;">By <a href="#">Golam Rabbani</a></h6>
+<ul class="grid"  data-masonry='{ "itemSelector": ".grid-item" }'>
+     {{#each post}}
 
- {{/each}}
+     <div class="grid-item">
+       <div class="card">
+         <div class="card-stacked">
+             <div class="card-content">
+               <li style="padding:15px">{{this.message}}</li>
+             </div>
+             <div class="card-action">
+               <span style="display:block;font-size:12px;color:#696969">
+                 {{this.updated_time}}
+               </span>
+             </div>
+          </div>
+      </div>
+    </div>
+     {{/each}}
+
 </ul>
 {{date}}
+</div>
 </body>
 </html>
