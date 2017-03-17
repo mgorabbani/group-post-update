@@ -13,7 +13,7 @@ app.get('/', (req,res)=>{
   FB.api(
     '/367870976752456/feed',
     'GET',
-    {"fields":"message,updated_time"},
+    {"fields":"message,updated_time,link"},
     function(response) {
       s = response.data
       res.render(__dirname+'/public/root.hbs',{
