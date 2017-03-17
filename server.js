@@ -3,7 +3,7 @@ const hbs = require('hbs');
 const FB = require('fb');
 const port = process.env.PORT || 3000;
 
-FB.setAccessToken('EAACEdEose0cBALCy3bZBdLEL9DFyRP1GNvQv6f89mp7EKlZAQp7NGKuTl4QZAVZAAV0P7Pr5W6102H3JoLN9znaSwZCpU8p0bFAbFWZAlQSEZAWmS37yC9HGdXYIbbXMemPVJZBHxPpOko0Os1CFQY3iRuxL2pwIscZCjsZBKLF2hmSbZCo0U7RrQuCeg2VhrzQnMkZD');
+FB.setAccessToken('EAACEdEose0cBAJLrllMzoteam5xJr38JpDsz4czjoWO0Hj8swbpwLq45Vg5SAUrLE4p4O08y8rQv7ejW9snZCxpZAFHTyWrxFZBFBsj8O1LncE5W3xfXbZAA9VvtrDCVLEpUG3X7qIQ1aJdg18gL6iQfh8lRlBnjAjoHjZA4gW3qrIJBQGZAeN');
 
 
 var app = express()
@@ -16,6 +16,7 @@ app.get('/', (req,res)=>{
     {"fields":"message,updated_time,link"},
     function(response) {
       s = response.data
+      console.log(s);
       res.render(__dirname+'/public/root.hbs',{
         title:'Alpha Softwarian\'s Latest Post',
         post: s
